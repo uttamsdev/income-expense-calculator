@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- link fontawesome  -->
     <script src="https://kit.fontawesome.com/ff4421e871.js" crossorigin="anonymous"></script>
+    <!-- link favicon -->
+    <link rel="shortcut icon" href="images/icon.png" type="image/png">
     <title>Income Calculator</title>
 </head>
 <body>
+    <!-- Header Area  -->
     <header>
         <div class="container">
             <h1>Income Calculator <i class="fa-solid fa-dollar-sign"></i></h1>
             <div class="banner">
-                <div>
+                <div class="left-image">
                     <img src="images/money.png" alt="">
                 </div>
                 <div class="income-calculation">
@@ -25,20 +28,19 @@
                         <input type="text" placeholder="Enter your income">
                         <p>Expensess</p>
                         <span id="food">Food: </span>
-                        <input type="text"> <br>
+                        <input type="text" placeholder="Enter Food Cost"> <br>
                         <span id="rent">Rent: </span>
-                        <input type="text"> <br>
+                        <input type="text" placeholder="Enter Rent Cost"> <br>
                         <span id="cloth">Clothes: </span>
-                        <input type="text"> <br>
+                        <input type="text" placeholder="Enter Clothes Cost"> <br>
                         <button id="calculate-btn">Calculate</button>
                         <p>Total Expensess: </p>
                         <p>Balance: <span>0</span> </p>
                         
-                        <span id="save">Save: </span> <input id="save-input"  type="text"> % <button id="save-btn">Save</button>
+                        <span id="save">Save: </span> <input id="save-input"  type="text" placeholder="savings"> % <button id="save-btn">Save</button>
                         <p>Saving Amount: <span>0</span></p>
                         <p>Remaining Balance: <span>0</span></p>
                     </div>
-                   
                 </div>
             </div>
         </div>

@@ -28,12 +28,8 @@ header {
   height: 815px;
   background-color: #f8f8f8;
   font-family: "Roboto", sans-serif;
-  /* padding: 58px 90px 0px 144px; */
-  /* margin:58px 90px 0px 144px; */
 }
 .income-fields {
-  /* padding: 58px 90px 0px 130px;  */
-
   margin-top: 30px;
 }
 .income-fields span {
@@ -48,10 +44,10 @@ header {
   margin-bottom: 25px;
 }
 #income {
-  padding-left: 144px;
+  margin-left: 144px;
 }
 #food {
-  padding-left: 167px;
+  margin-left: 167px;
 }
 #rent {
   margin-left: 171px;
@@ -66,19 +62,19 @@ header {
   margin-bottom: 20px;
   outline: none;
   border: none;
-  background-color: #59A5FF;
+  background-color: #59a5ff;
   font-size: 20px;
   font-weight: 700;
   color: white;
   border-radius: 3px;
   cursor: pointer;
 }
-#save-btn{
-     width: 150px;
+#save-btn {
+  width: 150px;
   height: 44px;
   outline: none;
   border: none;
-  background-color: #59A5FF;
+  background-color: #59a5ff;
   font-size: 20px;
   font-weight: 700;
   color: white;
@@ -106,4 +102,49 @@ input {
 }
 .fa-solid {
   color: goldenrod;
+}
+
+@media (max-width: 688px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  .banner {
+    flex-direction: column;
+  }
+  .container h1 {
+    font-size: 30px;
+  }
+  .left-image img {
+    width: 90%;
+    margin-left: 19px;
+  }
+  .income-calculation {
+    width: 100%;
+  }
+  #income {
+    margin-left: 10px;
+  }
+  #food {
+    margin-left: 30px;
+  }
+  #rent {
+    margin-left: 33px;
+  }
+  #cloth {
+    margin-left: 8px;
+  }
+  #calculate-btn {
+    margin-left: 100px;
+  }
+  #save-btn {
+    width: 100px;
+    height: 44px;
+  }
+  #save {
+    margin-left: 10px;
+  }
 }
