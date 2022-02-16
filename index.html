@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link fontawesome  -->
+    <script src="https://kit.fontawesome.com/ff4421e871.js" crossorigin="anonymous"></script>
     <title>Income Calculator</title>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <h1>Income Calculator <i class="fa-solid fa-dollar-sign"></i></h1>
+            <div class="banner">
+                <div>
+                    <img src="images/money.png" alt="">
+                </div>
+                <div class="income-calculation">
+                    <div class="income-fields">
+                        <p>Income</p>
+                        <span id="income">Income: </span>
+                        <input type="text" placeholder="Enter your income">
+                        <p>Expensess</p>
+                        <span id="food">Food: </span>
+                        <input type="text"> <br>
+                        <span id="rent">Rent: </span>
+                        <input type="text"> <br>
+                        <span id="cloth">Clothes: </span>
+                        <input type="text"> <br>
+                        <button id="calculate-btn">Calculate</button>
+                        <p>Total Expensess: </p>
+                        <p>Balance: <span>0</span> </p>
+                        
+                        <span id="save">Save: </span> <input id="save-input"  type="text"> % <button id="save-btn">Save</button>
+                        <p>Saving Amount: <span>0</span></p>
+                        <p>Remaining Balance: <span>0</span></p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
