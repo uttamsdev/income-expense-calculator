@@ -1,8 +1,10 @@
+/* fontawesome link  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
+/* container area  */
 header {
   display: flex;
   justify-content: center;
@@ -23,6 +25,7 @@ header {
   display: flex;
   gap: 80px;
 }
+/* income calculation  */
 .income-calculation {
   width: 600px;
   height: 815px;
@@ -55,6 +58,7 @@ header {
 #cloth {
   margin-left: 146px;
 }
+/* button design  */
 #calculate-btn {
   margin-left: 216px;
   width: 180px;
@@ -82,7 +86,7 @@ header {
   cursor: pointer;
   margin-left: 10px;
 }
-#saving-input{
+#saving-input {
   width: 132px;
   height: 44px;
   margin-right: 10px;
@@ -103,11 +107,11 @@ input {
 .fa-solid {
   color: goldenrod;
 }
-.error-msg img{
+.error-msg img {
   width: 25px;
 }
-.error-msg{
-  /* background-color: rgb(124, 110, 110); */
+/* error message handle  */
+.error-msg {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -117,6 +121,7 @@ input {
   margin-left: 55px;
 }
 
+/* mobile version responsive Media query  */
 @media (max-width: 688px) {
   * {
     padding: 0;

@@ -1,14 +1,17 @@
+//GetInputValue of all input Field Function 
 function getInputvalue(inputID){
     const inputField = document.getElementById(inputID);
     const inputFieldValue = parseFloat(inputField.value);
     return inputFieldValue;
 }
 
+//GetID Function
 function getID(id){
     const docID = document.getElementById(id);
     return docID;
 }
 
+//DisplayError function
 function displayError(id,numberError,negativeError){
     const inputField = getID(id);
     const display = getID(numberError);
@@ -33,7 +36,7 @@ function displayError(id,numberError,negativeError){
     }
 }
 
-
+//Event handlers
 document.getElementById('calculate-btn').addEventListener('click', function(){
     const incomeInputValue = getInputvalue('income-input');
     const foodInputValue = getInputvalue('food-input');
@@ -48,23 +51,6 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
         alert('At least one input filed is empty. Enter value of all input filed to continue.');
         return;
     }
-
-    // if(isNaN(clothInputValue)){
-    //     alert('Cloth input filed is empty. Enter value');
-    //     return;
-    // }
-    // if(isNaN(incomeInputValue)){
-    //     alert('Income Input Filed is empty. Enter value');
-    //     return;
-    // }
-    // if(isNaN(foodInputValue)){
-    //     alert('Food input field is empty. Enter value');
-    //     return;
-    // }
-    // if(isNaN(rentInputValue)){
-    //     alert('Rent input value is empty. Enter value');
-    //     return;
-    // }
 
     const totalExpenses = getID('total-expenses');
     const updatedTotalExpenses = foodInputValue + rentInputValue + clothInputValue;
@@ -93,41 +79,39 @@ document.getElementById('save-btn').addEventListener('click', function(){
         alert('Saving input filed is empty. Enter value here');
         return;
     }
+    if(isNaN(incomeInputValue)){
+        alert('Income input filed is empty. Enter value');
+        return;
+    }
     if(updatedSavngAmount > balanceText){
         alert('No Enough money for savings');
         return;
     }
     else{
-        if(savingInputValue >= 0){
-            savingAmount.innerText = updatedSavngAmount;
-        }
+        savingAmount.innerText = updatedSavngAmount;
     }
-    // if(updatedSavngAmount == ''){
-    //     alert('Enter any value to saving input field');
-    //     return;
-    // }
+ 
     const remainingBalace = getID('remaining-balance');
-    if(savingInputValue >= 0){
-        remainingBalace.innerText = parseFloat(balanceText) - updatedSavngAmount;
-    }
-})
+    remainingBalace.innerText = parseFloat(balanceText) - updatedSavngAmount;
+});
 
+//keyup events handlers for error checking
 document.getElementById('income-input').addEventListener('keyup', function(){
     displayError('income-input','number-error','negative-error');
-})
+});
 
 document.getElementById('food-input').addEventListener('keyup', function(){
     displayError('food-input','number-error2','negative-error2');
-})
+});
 
 document.getElementById('rent-input').addEventListener('keyup', function(){
     displayError('rent-input','number-error3','negative-error3');
-})
+});
 
 document.getElementById('cloth-input').addEventListener('keyup', function(){
     displayError('cloth-input','number-error4','negative-error4');
-})
+});
 
 document.getElementById('saving-input').addEventListener('keyup', function(){
     displayError('saving-input','number-error5','negative-error5');
-})
+});
