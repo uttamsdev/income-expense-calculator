@@ -54,11 +54,24 @@ document.getElementById('save-btn').addEventListener('click', function(){
     
     const savingAmount = getID('saving-amount');
     const updatedSavngAmount = (incomeInputValue * (savingInputValue/100));
-    savingAmount.innerText = updatedSavngAmount;
-
     const balanceText = document.getElementById('balance-text').innerText;
+    if(updatedSavngAmount > balanceText){
+        alert('No Enough money for savings');
+        return;
+    }
+    else{
+        if(savingInputValue >= 0){
+            savingAmount.innerText = updatedSavngAmount;
+        }
+    }
+    // if(updatedSavngAmount == ''){
+    //     alert('Enter any value to saving input field');
+    //     return;
+    // }
     const remainingBalace = getID('remaining-balance');
-    remainingBalace.innerText = parseFloat(balanceText) - updatedSavngAmount;
+    if(savingInputValue >= 0){
+        remainingBalace.innerText = parseFloat(balanceText) - updatedSavngAmount;
+    }
 })
 
 document.getElementById('income-input').addEventListener('keyup', function(){
