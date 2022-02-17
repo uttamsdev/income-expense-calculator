@@ -40,8 +40,38 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     const rentInputValue = getInputvalue('rent-input');
     const clothInputValue = getInputvalue('cloth-input');
 
+    if(isNaN(incomeInputValue) && isNaN(foodInputValue) && isNaN(rentInputValue) && isNaN(clothInputValue)){
+        alert('All input filed is empty. Enter value');
+        return;
+    }
+      if(isNaN(incomeInputValue) || isNaN(foodInputValue) || isNaN(rentInputValue) || isNaN(clothInputValue)){
+        alert('At least one input filed is empty. Enter value of all input filed to continue.');
+        return;
+    }
+
+    // if(isNaN(clothInputValue)){
+    //     alert('Cloth input filed is empty. Enter value');
+    //     return;
+    // }
+    // if(isNaN(incomeInputValue)){
+    //     alert('Income Input Filed is empty. Enter value');
+    //     return;
+    // }
+    // if(isNaN(foodInputValue)){
+    //     alert('Food input field is empty. Enter value');
+    //     return;
+    // }
+    // if(isNaN(rentInputValue)){
+    //     alert('Rent input value is empty. Enter value');
+    //     return;
+    // }
+
     const totalExpenses = getID('total-expenses');
     const updatedTotalExpenses = foodInputValue + rentInputValue + clothInputValue;
+    if(updatedTotalExpenses > incomeInputValue){
+        alert('You cannot expend more than your income');
+        return;
+    }
     totalExpenses.innerText = updatedTotalExpenses;
 
     const balanceText = getID('balance-text');
@@ -55,6 +85,14 @@ document.getElementById('save-btn').addEventListener('click', function(){
     const savingAmount = getID('saving-amount');
     const updatedSavngAmount = (incomeInputValue * (savingInputValue/100));
     const balanceText = document.getElementById('balance-text').innerText;
+    if(isNaN(incomeInputValue) && isNaN(savingInputValue)){
+        alert('Income input & saving input filed is empty. Enter value');
+        return;
+    }
+    if(isNaN(savingInputValue)){
+        alert('Saving input filed is empty. Enter value here');
+        return;
+    }
     if(updatedSavngAmount > balanceText){
         alert('No Enough money for savings');
         return;
