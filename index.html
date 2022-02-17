@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="shortcut icon" href="images/icon.png" type="image/png">
     <title>Income Calculator</title>
 </head>
+
 <body>
     <!-- Header Area  -->
     <header>
@@ -25,25 +27,30 @@
                     <div class="income-fields">
                         <p>Income</p>
                         <span id="income">Income: </span>
-                        <input type="text" placeholder="Enter your income">
+                        <input id="income-input" type="text" placeholder="Enter your income">
                         <p>Expensess</p>
                         <span id="food">Food: </span>
-                        <input type="text" placeholder="Enter Food Cost"> <br>
+                        <input id="food-input" type="text" placeholder="Enter Food Cost"> <br>
                         <span id="rent">Rent: </span>
-                        <input type="text" placeholder="Enter Rent Cost"> <br>
+                        <input id="rent-input" type="text" placeholder="Enter Rent Cost"> <br>
                         <span id="cloth">Clothes: </span>
-                        <input type="text" placeholder="Enter Clothes Cost"> <br>
+                        <input id="cloth-input" type="text" placeholder="Enter Clothes Cost"> <br>
                         <button id="calculate-btn">Calculate</button>
-                        <p>Total Expensess: </p>
-                        <p>Balance: <span>0</span> </p>
-                        
-                        <span id="save">Save: </span> <input id="save-input"  type="text" placeholder="savings"> % <button id="save-btn">Save</button>
-                        <p>Saving Amount: <span>0</span></p>
-                        <p>Remaining Balance: <span>0</span></p>
+                        <p>Total Expensess: <span id="total-expenses">0</span> </p>
+                        <p>Balance: <span id="balance-text">0</span> </p>
+
+                        <span id="save">Save: </span> <input id="saving-input" type="text" placeholder="savings"> %
+                        <button id="save-btn">Save</button>
+                        <p>Saving Amount: <span id="saving-amount">0</span></p>
+                        <p>Remaining Balance: <span id="remaining-balance">0</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- link js -->
+    <script src="js/income.js"></script>
 </body>
+
 </html>
