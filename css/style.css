@@ -103,6 +103,19 @@ input {
 .fa-solid {
   color: goldenrod;
 }
+.error-msg img{
+  width: 25px;
+}
+.error-msg{
+  /* background-color: rgb(124, 110, 110); */
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: red;
+  display: none;
+  margin-top: -15px;
+  margin-left: 55px;
+}
 
 @media (max-width: 688px) {
   * {
